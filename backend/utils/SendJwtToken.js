@@ -9,9 +9,6 @@ const sendJwtToken = (user, statusCode, res) => {
     // secure: req.secure || req.headers["x-forwarded-proto"] === "https",
 
     httpOnly: true,
-    secure: true, // Set to true if your application is served over HTTPS
-    domain: "localhost", // Set to your domain
-    sameSite: "None",
   };
 
   user.password = undefined;
