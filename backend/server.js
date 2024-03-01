@@ -21,9 +21,8 @@ cloudinary.config({
 });
 
 //config
-port = 2000;
-const server = app.listen(process.env.Port, () =>
-  console.log(`app is running on port${process.env.Port}`),
+const server = app.listen(process.env.PORT, () =>
+  console.log(`app is running on port${process.env.PORT}`),
 );
 //// final error catching
 process.on("unhandledRejection", (err) => {
