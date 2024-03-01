@@ -20,6 +20,7 @@
     "@stripe/react-stripe-js": "^2.5.0",
     "@stripe/stripe-js": "^3.0.5",
     "axios": "^1.6.7",
+    "backend": "file:..",
     "chart.js": "^4.4.1",
     "country-state-city": "^3.2.1",
     "js-cookie": "^3.0.5",
