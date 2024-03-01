@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 // app.use(cors());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://mern-ecommerce-uku0.onrender.com",
     credentials: true,
   }),
 );
