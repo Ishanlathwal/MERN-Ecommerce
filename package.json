@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "install-server": "cd backend && npm install",
+    "install-server": "npm install && cd frontend && npm install ",
     "start-server": "cd backend && node server.js",
     "install-client": "cd frontend && npm install",
     "build-client": "cd frontend && npm run build",
