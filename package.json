@@ -4,6 +4,7 @@
   "description": "",
   "type": "commonjs",
   "main": "backend/server.js",
+  "proxy": "https://mern-ecommerce-uku0.onrender.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon backend/server.js",
