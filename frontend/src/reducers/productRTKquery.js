@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000/api/v1/",
+    baseUrl: "https://mern-ecommerce-uku0.onrender.com/api/v1/",
 
     credentials: "include",
   }),

@@ -57,7 +57,7 @@ export const forgotPassword = (email) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/api/v1/forgotpassword`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/forgotpassword`,
       email,
       config,
     );
@@ -87,7 +87,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     };
 
     const { data } = await axios.patch(
-      `http://localhost:4000/api/v1/users/resetpassword/${token}`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/users/resetpassword/${token}`,
       passwords,
       config,
     );

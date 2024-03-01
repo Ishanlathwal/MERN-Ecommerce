@@ -54,7 +54,7 @@ export const updateUserProfile = (userData) => async (dispatch) => {
     };
 
     const { data } = await axios.patch(
-      `http://localhost:4000/api/v1/me/update`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/me/update`,
       userData,
       config,
     );
@@ -77,7 +77,7 @@ export const updateUserPassword = (password) => async (dispatch) => {
     };
 
     const { data } = await axios.patch(
-      `http://localhost:4000/api/v1/user/update`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/user/update`,
       password,
       config,
     );

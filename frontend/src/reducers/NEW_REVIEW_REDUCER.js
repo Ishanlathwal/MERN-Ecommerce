@@ -48,7 +48,7 @@ export const newReview = (reviewData) => async (dispatch) => {
     };
 
     const { data } = await axios.patch(
-      `http://localhost:4000/api/v1/review`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/review`,
       reviewData,
       config,
     );

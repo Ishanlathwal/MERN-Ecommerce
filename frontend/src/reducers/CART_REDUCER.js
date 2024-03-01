@@ -52,7 +52,7 @@ export const cartReducer = (state = initialState, action) => {
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `http://localhost:4000/api/v1/products/${id}`,
+    `https://mern-ecommerce-uku0.onrender.com/api/v1/products/${id}`,
   );
   dispatch({
     type: "add/cart",

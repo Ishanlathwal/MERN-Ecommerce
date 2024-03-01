@@ -75,7 +75,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/api/v1/login`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/login`,
       { email, password },
       config,
     );
@@ -103,7 +103,7 @@ export const signUp = (userData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/api/v1/register`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/register`,
       userData,
       config,
     );
@@ -123,7 +123,10 @@ export const loadUser = () => async (dispatch) => {
       withCredentials: true,
     };
 
-    const { data } = await axios.get(`http://localhost:4000/api/v1/me`, config);
+    const { data } = await axios.get(
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/me`,
+      config,
+    );
 
     dispatch({ type: "loadUser/success", payload: data.user });
   } catch (error) {
@@ -140,7 +143,11 @@ export const logOut = () => async (dispatch) => {
       withCredentials: true,
     };
 
-    await axios.post(`http://localhost:4000/api/v1/logout`, null, config);
+    await axios.post(
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/logout`,
+      null,
+      config,
+    );
 
     dispatch({ type: "logout/success" });
   } catch (error) {

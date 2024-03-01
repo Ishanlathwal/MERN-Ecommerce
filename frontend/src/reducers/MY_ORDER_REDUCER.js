@@ -34,7 +34,7 @@ export const myOrder = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/orders/me`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/orders/me`,
       config,
     );
 
@@ -84,7 +84,7 @@ export const getOrderDetails = (id) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/order/${id}`,
+      `https://mern-ecommerce-uku0.onrender.com/api/v1/order/${id}`,
       config,
     );
     dispatch({ type: "order/detailSuccess", payload: data.order });
