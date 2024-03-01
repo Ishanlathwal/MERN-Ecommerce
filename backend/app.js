@@ -12,12 +12,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
 // app.use(cors());
-app.use(
-  cors({
-    origin: "https://mern-ecommerce-uku0.onrender.com",
-    credentials: true,
-  }),
-);
+app.use(cors());
 // to set jwt in front end
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "http://localhost:5173");
