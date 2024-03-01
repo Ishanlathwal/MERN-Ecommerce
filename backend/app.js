@@ -1,3 +1,4 @@
+const dotenv = require("dotenv");
 const express = require("express");
 const globalErrorHAndler = require("./utils/Error-Handeling/Error-Controller");
 const AppError = require("./utils/Error-Handeling/Error-Handeling_Class");
@@ -8,9 +9,8 @@ const path = require("path");
 
 ///////////////////////////////////////////////
 const app = express();
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "backend/config/config.env" });
-}
+dotenv.config({ path: "backend/config/config.env" });
+
 // app.use(cors());
 app.use(
   cors({
