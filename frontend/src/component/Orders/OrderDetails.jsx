@@ -10,7 +10,6 @@ import { Typography } from "@mui/material";
 
 const OrderDetails = () => {
   const { order, error, loading } = useSelector((state) => state.orderDetails);
-  console.log(order);
   const dispatch = useDispatch();
   const { id } = useParams();
 

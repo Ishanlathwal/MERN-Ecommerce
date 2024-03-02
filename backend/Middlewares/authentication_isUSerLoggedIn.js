@@ -15,7 +15,6 @@ exports.protectRoutes = catchAsyncError(async (req, res, next) => {
   } else {
     token = req.cookies.jwt;
   }
-  console.log(req.headers.authorization);
   if (!token) {
     return next(
       new AppError("You are not logged in! Please log in to get access.", 401),

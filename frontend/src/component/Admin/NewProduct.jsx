@@ -65,7 +65,7 @@ const NewProduct = () => {
     try {
       await createProduct(data);
     } catch (err) {
-      console.log("err");
+      console.log(err);
     }
   };
 

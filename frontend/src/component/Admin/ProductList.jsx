@@ -26,7 +26,6 @@ const ProductList = () => {
   const [
     deleteProduct,
     {
-      data,
       isError: adminDelete,
       isLoading: adminDeleteLoading,
       error: adminDeleteError,
@@ -37,7 +36,6 @@ const ProductList = () => {
   const deleteProductHandler = (id) => {
     deleteProduct(id);
   };
-  console.log(data);
 
   useEffect(() => {
     if (iaAdminError) {

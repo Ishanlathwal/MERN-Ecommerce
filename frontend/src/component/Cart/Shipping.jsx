@@ -22,7 +22,6 @@ const Shipping = () => {
   const navigate = useNavigate();
   const { shippingInfo } = useSelector((state) => state.cart);
 
-  console.log(shippingInfo);
   const [address, setAddress] = useState(shippingInfo.address);
   const [city, setCity] = useState(shippingInfo.city);
   const [state, setState] = useState(shippingInfo.state);
