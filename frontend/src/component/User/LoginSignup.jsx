@@ -22,8 +22,8 @@ const LoginSignup = () => {
     (state) => state.user,
   );
   // Login Data
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState("Admin.admin.com");
+  const [loginPassword, setLoginPassword] = useState("admin");
 
   // Signup data
   const [avatar, setAvatar] = useState("/Profile.png");
