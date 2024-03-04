@@ -105,8 +105,8 @@ const UpdateProduct = () => {
   const createProductImagesChange = (e) => {
     const files = Array.from(e.target.files);
 
-    // setImages([]);
-    // setImagesPreview([]);
+    setImages([]);
+    setImagesPreview([]);
     setOldImages([]);
 
     files.forEach((file) => {
