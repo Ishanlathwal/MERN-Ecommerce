@@ -53,28 +53,17 @@ const NewProduct = () => {
   const createProductSubmitHandler = async (e) => {
     e.preventDefault();
 
-    // const data = {
-    //   name,
-    //   price,
-    //   description,
-    //   category,
-    //   stock,
-    //   images,
-    // };
-    const myForm = new FormData();
-
-    myForm.set("name", name);
-    myForm.set("price", price);
-    myForm.set("description", description);
-    myForm.set("category", category);
-    myForm.set("stock", stock);
-
-    images.forEach((image) => {
-      myForm.append("images", image);
-    });
+    const data = {
+      name,
+      price,
+      description,
+      category,
+      stock,
+      images,
+    };
 
     try {
-      await createProduct(myForm);
+      await createProduct(data);
     } catch (err) {
       console.log(err);
     }
@@ -83,8 +72,8 @@ const NewProduct = () => {
   const createProductImagesChange = (e) => {
     const files = Array.from(e.target.files);
 
-    // setImages([]);
-    // setImagesPreview([]);
+    setImages([]);
+    setImagesPreview([]);
 
     files.forEach((file) => {
       const reader = new FileReader();
