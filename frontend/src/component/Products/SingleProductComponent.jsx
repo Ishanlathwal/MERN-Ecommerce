@@ -67,7 +67,7 @@ const SingleProductComponent = () => {
     toast.success("Item Added To Cart");
   };
 
-  const reviewSubmitHandler = () => {
+  const reviewSubmitHandler = async () => {
     const myForm = new FormData();
 
     myForm.set("rating", rating);
@@ -75,7 +75,7 @@ const SingleProductComponent = () => {
     myForm.set("productId", id);
 
     dispatch(newReview(myForm));
-    refetch();
+    await refetch();
     setOpen(false);
   };
   useEffect(() => {
