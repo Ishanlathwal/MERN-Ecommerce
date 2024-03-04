@@ -53,17 +53,28 @@ const NewProduct = () => {
   const createProductSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const data = {
-      name,
-      price,
-      description,
-      category,
-      stock,
-      images,
-    };
+    // const data = {
+    //   name,
+    //   price,
+    //   description,
+    //   category,
+    //   stock,
+    //   images,
+    // };
+    const myForm = new FormData();
+
+    myForm.set("name", name);
+    myForm.set("price", price);
+    myForm.set("description", description);
+    myForm.set("category", category);
+    myForm.set("stock", stock);
+
+    images.forEach((image) => {
+      myForm.append("images", image);
+    });
 
     try {
-      await createProduct(data);
+      await createProduct(myForm);
     } catch (err) {
       console.log(err);
     }
