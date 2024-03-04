@@ -86,6 +86,7 @@ const UpdateProduct = () => {
 
   const updateProductSubmitHandler = async (e) => {
     e.preventDefault();
+    let imagesToSend = oldImages.length ? oldImages : images;
 
     const data = {
       name,
@@ -93,7 +94,7 @@ const UpdateProduct = () => {
       description,
       category,
       stock,
-      images,
+      images: imagesToSend,
     };
     try {
       await updateProduct({ id, data });
