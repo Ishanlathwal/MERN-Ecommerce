@@ -86,15 +86,17 @@ const UpdateProduct = () => {
 
   const updateProductSubmitHandler = async (e) => {
     e.preventDefault();
-    let imagesToSend = oldImages.length ? oldImages : images;
-
+    if (images.length === 0) {
+      toast.error("Please add new images");
+      return;
+    }
     const data = {
       name,
       price,
       description,
       category,
       stock,
-      images: imagesToSend,
+      images,
     };
     try {
       await updateProduct({ id, data });
