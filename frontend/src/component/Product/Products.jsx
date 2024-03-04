@@ -112,7 +112,7 @@ const Products = () => {
               key={category}
               onClick={() => {
                 setCurrentPage(1);
-                setCategory(category.toLowerCase());
+                setCategory(category);
               }}>
               {category}
             </li>
