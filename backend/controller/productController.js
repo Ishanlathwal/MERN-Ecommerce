@@ -87,7 +87,6 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
   req.body.user = req.user.id; // because we gave reference in product_schema
 
   const product = await Product.create(req.body);
-  console.log(req.body);
   res.status(201).json({
     success: true,
     product,
